@@ -26,7 +26,8 @@ namespace AzureFunctions
             _logger = log;
         }
 
-        [FunctionName("HttpOPenAPIToBlob")]
+        [FunctionName("HttpOp" +
+            "enAPIToBlob")]
         [OpenApiOperation(operationId: "Run", tags: new[] { "name" })]
         [OpenApiSecurity("function_key", SecuritySchemeType.ApiKey, Name = "code", In = OpenApiSecurityLocationType.Query)]
         [OpenApiParameter(name: "name", In = ParameterLocation.Query, Required = true, Type = typeof(string), Description = "The **Name** parameter")]
